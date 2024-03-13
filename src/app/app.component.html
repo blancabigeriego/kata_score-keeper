@@ -1,3 +1,6 @@
-<div *ngFor="let team of numberOfTeams">
-  <app-team [teamName]="team"></app-team>
+<div class="teams-container">
+  <div *ngFor="let team of numberOfTeams; let i = index">
+    <app-team [teamName]="team" [ngStyle]="{ color: teamColors[i] }">
+    </app-team>
+  </div>
 </div>

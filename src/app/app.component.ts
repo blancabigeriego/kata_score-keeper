@@ -8,4 +8,5 @@ import { Component } from "@angular/core";
 export class AppComponent {
   title = "kata-score-keeper";
   public numberOfTeams: number[] = [1, 2];
+  public teamColors = ["red", "blue", "green"];
 }
