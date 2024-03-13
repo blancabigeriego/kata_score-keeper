@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
   selector: "app-team",
@@ -6,5 +6,6 @@ import { Component } from "@angular/core";
   styleUrls: ["./team.component.scss"],
 })
 export class TeamComponent {
+  @Input() teamName: number = 0;
   public numberOfButtonsAndPoints: number[] = [1, 2, 3];
 }
