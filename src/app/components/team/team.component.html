@@ -1,5 +1,9 @@
-<h1>TEAM NUMBER {{ teamName }}</h1>
+<div class="container">
+  <h1>TEAM NUMBER {{ teamName }}</h1>
 
-<div *ngFor="let number of numberOfButtonsAndPoints">
-  <app-button [config]="number"></app-button>
+  <div class="button-container">
+    <div *ngFor="let number of numberOfButtonsAndPoints">
+      <app-button [config]="number"></app-button>
+    </div>
+  </div>
 </div>

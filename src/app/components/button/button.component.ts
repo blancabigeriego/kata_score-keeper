@@ -7,4 +7,5 @@ import { Component, Input, OnInit } from "@angular/core";
 })
 export class ButtonComponent {
   @Input() public config: number = 0;
+  public colors: string[] = ["fondo1", "fondo2", "fondo3", "fondo4"];
 }
