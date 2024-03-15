@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 @Component({
   selector: "app-marker",
@@ -6,5 +6,5 @@ import { Component } from "@angular/core";
   styleUrls: ["./marker.component.scss"],
 })
 export class MarkerComponent {
-  public score: string = "S C O R E";
+  @Input() public score: string = "S C O R E";
 }

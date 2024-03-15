@@ -8,4 +8,5 @@ import { Component, Input } from "@angular/core";
 export class TeamComponent {
   @Input() teamName: number = 0;
   public numberOfButtonsAndPoints: number[] = [1, 2, 3];
+  public teamScore: string = "000:000";
 }
