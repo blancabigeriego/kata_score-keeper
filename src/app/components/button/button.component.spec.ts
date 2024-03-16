@@ -21,4 +21,11 @@ describe("ButtonComponent", () => {
   it("should create", () => {
     expect(component).toBeTruthy();
   });
+
+  it("should render the config value", () => {
+    component.config = 3;
+    fixture.detectChanges();
+    const button = fixture.nativeElement.querySelector("button");
+    expect(button.textContent).toEqual("Score 3 !!");
+  });
 });

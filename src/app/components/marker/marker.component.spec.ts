@@ -21,4 +21,10 @@ describe("MarkerComponent", () => {
   it("should create", () => {
     expect(component).toBeTruthy();
   });
+  it("should render the score", () => {
+    component.score = "000:003";
+    fixture.detectChanges();
+    const markerElement = fixture.nativeElement.querySelector(".border");
+    expect(markerElement.textContent).toEqual("000:003");
+  });
 });
