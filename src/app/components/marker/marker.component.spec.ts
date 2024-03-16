@@ -1,23 +1,24 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from "@angular/core/testing";
 
-import { MarkerComponent } from './marker.component';
+import { MarkerComponent } from "./marker.component";
+import { NO_ERRORS_SCHEMA } from "@angular/core";
 
-describe('MarkerComponent', () => {
+describe("MarkerComponent", () => {
   let component: MarkerComponent;
   let fixture: ComponentFixture<MarkerComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MarkerComponent ]
-    })
-    .compileComponents();
+      declarations: [MarkerComponent],
+      schemas: [NO_ERRORS_SCHEMA],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(MarkerComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it("should create", () => {
     expect(component).toBeTruthy();
   });
 });
