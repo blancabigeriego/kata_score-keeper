@@ -21,4 +21,19 @@ describe("TeamComponent", () => {
   it("should create", () => {
     expect(component).toBeTruthy();
   });
+  it("should initialize team score, name, and number of buttons and points correctly", () => {
+    expect(component.teamScore).toBe("000:000");
+    expect(component.teamName).toBe(0);
+    expect(component.numberOfButtonsAndPoints).toEqual([1, 2, 3]);
+  });
+  it("should increment team score correctly when valid index is provided", () => {
+    component.teamScore = "001:000";
+    component.scorePoints(2);
+    expect(component.teamScore).toBe("001:002");
+  });
+  it("should format score correctly", () => {
+    expect((component as any).formatScore(5)).toBe("005");
+    expect((component as any).formatScore(100)).toBe("100");
+    expect((component as any).formatScore(999)).toBe("999");
+  });
 });
